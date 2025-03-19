@@ -31,12 +31,14 @@ sudo apt-get install librocksdb-dev liblz4-dev
 ## Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/yourusername/dilok-did.git
 cd dilok-did
 ```
 
-2. Build the project:
+1. Build the project:
+
 ```bash
 cargo build
 ```
@@ -53,13 +55,13 @@ let config = StorageConfig {
 };
 ```
 
-2. Initialize the DID system:
+1. Initialize the DID system:
 
 ```rust
 let did_system = DilokDid::new(config)?;
 ```
 
-3. Register a user:
+1. Register a user:
 
 ```rust
 let user_info = UserInfo {
@@ -68,7 +70,7 @@ let user_info = UserInfo {
 did_system.register_user(user_info, camera_index).await?;
 ```
 
-4. Verify a user:
+1. Verify a user:
 
 ```rust
 let is_verified = did_system.verify_user(user_id, camera_index).await?;
@@ -91,10 +93,10 @@ cargo test
 ## Contributing
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+1. Create your feature branch (`git checkout -b feature/amazing-feature`)
+1. Commit your changes (`git commit -m 'Add some amazing feature'`)
+1. Push to the branch (`git push origin feature/amazing-feature`)
+1. Open a Pull Request
 
 ## License
 
